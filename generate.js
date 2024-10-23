@@ -14,10 +14,11 @@ const labels = filesNames
     .join('');
 
 const entries = filesNames
-    .map(name => `:${name.slice(0, name.lastIndexOf('.'))} rdf:type   mf:${type}${name.includes('update') ? 'Update' : ''}SyntaxTest11 ;
+    .map(name => `:${name.slice(0, name.lastIndexOf('.'))} rdf:type   mf:${type}${name.includes('update') ? 'Update' : ''}SyntaxTestSparql ;
    dawgt:approval dawgt:Proposed ;
-   mf:name    "${name}" ;
-   mf:action  <${name}> .`)
+   mf:name        "${name}" ;
+   mf:specVersion "sparql-1.2";
+   mf:action      <${name}> .`)
     .join('\n\n');
 
 console.log(
