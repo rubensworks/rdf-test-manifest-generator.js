@@ -14,7 +14,7 @@ const labels = filesNames
     .join('');
 
 const entries = filesNames
-    .map(name => `:${name.slice(0, name.lastIndexOf('.'))} rdf:type   mf:${type}${name.includes('update') ? 'Update' : ''}SyntaxTestSparql ;
+    .map(name => `:${name.slice(0, name.lastIndexOf('.'))} rdf:type   mf:${type}${name.includes('update') ? 'Update' : ''}SyntaxTest ;
    dawgt:approval dawgt:Proposed ;
    mf:name        "${name}" ;
    mf:specVersion "sparql-1.2";
